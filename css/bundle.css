@@ -549,7 +549,7 @@ body {
 .collection-wrapper {
     position: absolute;
     top: 18em;
-    right: -10em;
+    left: 50em;
     overflow: hidden;
     height: 28em;
     white-space: nowrap;
