@@ -615,7 +615,7 @@ body {
 .time {
     position: absolute;
     top: 4em;
-    right: 4em;
+    left: 0;
     text-align: right;
 }
 
