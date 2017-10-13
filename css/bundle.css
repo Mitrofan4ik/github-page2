@@ -459,15 +459,9 @@ body {
 }
 
 .collection-wrapper {
-    overflow: auto;
-    overflow-y: hidden;
     height: 380px;
     margin-top: 15em;
     margin-top: 15em;
-}
-
-.collection-wrapper__overflow {
-    width: 3000px;
 }
 
 .collection {
@@ -540,7 +534,7 @@ body {
 .collection-holder {
     position: relative;
     z-index: 1;
-    display: table;
+    display: block;
     overflow: hidden;
     width: 30em;
     height: 20em;
@@ -567,7 +561,7 @@ body {
     font-family: 'Roboto-Bold';
     font-size: .9em;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: .4em;
     text-transform: uppercase;
     color: #ffde39;
 }
@@ -585,8 +579,13 @@ body {
     right: 0;
     width: 60px;
     height: 40px;
-    padding-top: .6em;
     background: #949492;
+}
+
+.collection-count-holder {
+    position: absolute;
+    top: .6em;
+    left: .6em;
 }
 
 .collection-count__icon {
@@ -605,8 +604,9 @@ body {
 }
 
 .collection-text {
-    display: table-cell;
-    vertical-align: middle;
+    position: absolute;
+    top: 9em;
+    left: 11em;
 }
 /*# sourceMappingURL=sourcemaps/assets.css.map */
 
