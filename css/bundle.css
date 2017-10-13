@@ -157,10 +157,13 @@ body {
     display: block;
     width: 45em;
     height: 100%;
-    padding: 7em 2em;
-    padding-top: 13em;
-    padding-left: 20em;
     background: url('../img/bg_fx.png');
+}
+
+.nav-hidden__holder {
+    position: absolute;
+    top: 15em;
+    left: 20em;
 }
 
 .nav-hidden-title {
@@ -599,7 +602,7 @@ body {
 .time {
     position: absolute;
     top: 4em;
-    right: 4em;
+    right: 8em;
     text-align: right;
 }
 
