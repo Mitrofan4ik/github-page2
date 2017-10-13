@@ -164,7 +164,7 @@ body {
 
 .nav-hidden-title {
     font-family: 'Roboto-Bold';
-    font-size: 35px;
+    font-size: 2.2em;
     display: block;
     margin-bottom: 80px;
     padding-left: 15px;
@@ -610,6 +610,30 @@ body {
     position: absolute;
     top: 9em;
     left: 11em;
+}
+
+.time {
+    position: absolute;
+    top: 4em;
+    right: 4em;
+    text-align: right;
+}
+
+.time-count {
+    font-family: 'Roboto-Bold';
+    font-size: 2.2em;
+    display: block;
+    margin-bottom: .2em;
+    color: #fff;
+}
+
+.time-day {
+    font-family: 'Roboto-Regular';
+    font-size: .8em;
+    display: block;
+    text-transform: uppercase;
+    opacity: .6;
+    color: #fff;
 }
 /*# sourceMappingURL=sourcemaps/assets.css.map */
 
