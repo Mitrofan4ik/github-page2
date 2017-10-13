@@ -452,16 +452,16 @@ body {
 .collection-wrapper {
     position: absolute;
     top: 18em;
-    right: 0;
-    height: 380px;
+    right: -10em;
+    height: 28em;
 }
 
 .collection {
     position: relative;
     z-index: 9;
     display: inline-block;
-    width: 30em;
-    height: 20em;
+    width: 37em;
+    height: 24.6em;
     margin: 20px;
     background: #ccc;
 }
@@ -528,8 +528,8 @@ body {
     z-index: 1;
     display: block;
     overflow: hidden;
-    width: 30em;
-    height: 20em;
+    width: 37em;
+    height: 24.6em;
     text-align: center;
     background: url('http://img.wennermedia.com/article-leads-horizontal/rs-242957-xmen.jpg');
     -webkit-box-shadow: 0 0 10px 0 black;
