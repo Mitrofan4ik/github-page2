@@ -29,6 +29,6 @@ for (li = 0; li < dropDownListItems.length; li++) {
   });
 }
 
-dropDown.addEventListener("click", function() {    
+dropDown.addEventListener("click", function() {  
   dropDownList.classList.toggle('active');
 });
