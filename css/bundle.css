@@ -164,7 +164,7 @@ body {
     display: block;
     width: 43em;
     height: 100%;
-    background: url('../img/bg_fx_menu.png');
+    background: url('../img/bg_fx_menu.png') no-repeat;
 }
 
 .nav-hidden__holder {
@@ -252,16 +252,35 @@ body {
     overflow: hidden;
     width: 148px;
     height: 100%;
-    background: url('../img/bg_fx_innerpage.png');
+    background: url('../img/bg_fx_innerpage.png') no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+@media screen and (min-width: 3840px) {
+    .nav {
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .nav {
+        width: 105px;
+    }
 }
 
 .nav-arrow {
     position: absolute;
     z-index: 101;
     top: 50%;
-    left: 20px;
+    left: 50%;
     width: 50px;
     height: 50px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
@@ -269,6 +288,26 @@ body {
     -webkit-box-shadow: 2px 4px 16px -3px #000;
     -moz-box-shadow: 2px 4px 16px -3px #000;
     box-shadow: 2px 4px 16px -3px #000;
+}
+
+@media screen and (min-width: 1920px) {
+    .nav-arrow {
+        width: 60px;
+        height: 60px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .nav-arrow {
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+    }
 }
 
 .nav-arrow:focus {
@@ -293,6 +332,22 @@ body {
     background: #fff;
 }
 
+@media screen and (min-width: 1920px) {
+    .nav-arrow::before {
+        top: 25px;
+        left: 22px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .nav-arrow::before {
+        top: 40px;
+        left: 32px;
+        width: 32px;
+        height: 3px;
+    }
+}
+
 .nav-arrow::after {
     position: absolute;
     top: 27px;
@@ -308,6 +363,22 @@ body {
     background: #fff;
 }
 
+@media screen and (min-width: 1920px) {
+    .nav-arrow::after {
+        top: 32px;
+        left: 22px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .nav-arrow::after {
+        top: 61px;
+        left: 32px;
+        width: 32px;
+        height: 3px;
+    }
+}
+
 .content {
     display: block;
 }
@@ -315,7 +386,7 @@ body {
 .content-row {
     font-size: 0;
     display: block;
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
     padding: 20px 0;
 }
@@ -331,9 +402,36 @@ body {
     -moz-transition: all .15s ease-in;
     -o-transition: all .15s ease-in;
     transition: all .15s ease-in;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+@media screen and (min-width: 1920px) {
+    .card {
+        width: 280px;
+        height: 440px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .card {
+        width: 520px;
+        height: 840px;
+        margin: 0 20px 35px 20px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .card {
+        width: 150px;
+        height: 230px;
+    }
 }
 
 .card:first-child .card-body .card-title {
@@ -373,6 +471,14 @@ body {
     box-shadow: -9px 9px #ffde39;
 }
 
+@media screen and (min-width: 3840px) {
+    .card:focus .card-body {
+        -webkit-box-shadow: -20px 20px #ffde39;
+        -moz-box-shadow: -20px 20px #ffde39;
+        box-shadow: -20px 20px #ffde39;
+    }
+}
+
 .card:hover .card-title {
     bottom: 2.2em;
     left: 1em;
@@ -389,7 +495,16 @@ body {
     box-shadow: -9px 9px #ffde39;
 }
 
+@media screen and (min-width: 3840px) {
+    .card:hover .card-body {
+        -webkit-box-shadow: -20px 20px #ffde39;
+        -moz-box-shadow: -20px 20px #ffde39;
+        box-shadow: -20px 20px #ffde39;
+    }
+}
+
 .card-body {
+    font-size: 14px;
     position: relative;
     width: 100%;
     height: 100%;
@@ -399,6 +514,24 @@ body {
     transition: all .15s ease-in;
     -moz-background-size: cover;
     background-size: cover;
+}
+
+@media screen and (min-width: 1920px) {
+    .card-body {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .card-body {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .card-body {
+        font-size: 12px;
+    }
 }
 
 .card-body.body-bg1 {
@@ -463,7 +596,7 @@ body {
 
 .card-title {
     font-family: 'Roboto-Medium';
-    font-size: 15px;
+    font-size: 1.1em;
     position: absolute;
     bottom: 1em;
     left: 1em;
@@ -478,7 +611,7 @@ body {
 
 .card-title-hide {
     font-family: 'Roboto-Medium';
-    font-size: 14px;
+    font-size: 1em;
     position: absolute;
     bottom: 1em;
     left: 1em;
@@ -493,6 +626,24 @@ body {
 
 .description {
     padding: 20px 0;
+}
+
+@media screen and (min-width: 1920px) {
+    .description {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .description {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .description {
+        font-size: 14px;
+    }
 }
 
 .description-text__title {
@@ -543,6 +694,8 @@ body {
 
 .description-action {
     position: relative;
+    width: 100%;
+    height: 5em;
     padding: 20px 0;
 }
 
@@ -551,6 +704,12 @@ body {
     top: 1.3em;
     right: .9em;
     width: 16em;
+}
+
+@media screen and (min-width: 3840px) {
+    .sort-card {
+        top: .3em;
+    }
 }
 
 .sort-card__title {
@@ -578,11 +737,15 @@ body {
 }
 
 .sort-card__title:hover {
-    color: #fff;
-    background: #242c33;
+    color: #242c33;
+    background: #ffde39;
     -webkit-box-shadow: 0 5px 9px #000;
     -moz-box-shadow: 0 5px 9px #000;
     box-shadow: 0 5px 9px #000;
+}
+
+.sort-card__title:hover .icon {
+    background: url('../img/down-arrow-black.png');
 }
 
 .sort-card__title:focus {
@@ -592,6 +755,10 @@ body {
     -webkit-box-shadow: 0 5px 9px #000;
     -moz-box-shadow: 0 5px 9px #000;
     box-shadow: 0 5px 9px #000;
+}
+
+.sort-card__title:focus .icon {
+    background: url('../img/down-arrow.png');
 }
 
 .sort-card__title span {
@@ -606,6 +773,28 @@ body {
     margin-left: .3em;
     vertical-align: middle;
     background: url('../img/down-arrow.png');
+}
+
+@media screen and (min-width: 1920px) {
+    .sort-card__title .icon {
+        width: .8em;
+        height: .8em;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .sort-card__title .icon {
+        width: .8em;
+        height: .7em;
+        background: url('../img/down-chevron.png');
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .sort-card__title .icon {
+        width: 1.2em;
+        height: 1.2em;
+    }
 }
 
 .sort-card__title.active {
@@ -664,11 +853,43 @@ body {
 .collection-wrapper {
     position: absolute;
     top: 18em;
-    left: 50em;
+    left: 95%;
     overflow: hidden;
     height: 28em;
     padding: 20px;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -o-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     white-space: nowrap;
+}
+
+.collection-wrapper .collection-inner-title {
+    display: none;
+}
+
+.collection-wrapper--title {
+    font-size: 20px;
+    top: 50%;
+    left: 35%;
+    display: block;
+    height: auto;
+    -webkit-transform: translate(25%, -50%);
+    -moz-transform: translate(25%, -50%);
+    -ms-transform: translate(25%, -50%);
+    -o-transform: translate(25%, -50%);
+    transform: translate(25%, -50%);
+}
+
+.collection-wrapper--title .collection-inner-title {
+    display: block;
+}
+
+.collection-wrapper--title .collection-inner-title span {
+    font-family: 'Roboto-Bold';
+    font-size: 5em;
+    color: #fff;
 }
 
 .collection {
@@ -678,7 +899,16 @@ body {
     width: 37em;
     height: 24.6em;
     margin: 0 20px;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
     background: #ccc;
+}
+
+.collection.hidden {
+    display: none;
 }
 
 .collection:hover .collection-back__one {
@@ -832,10 +1062,23 @@ body {
 }
 
 .time {
+    font-size: 16px;
     position: absolute;
     top: 4em;
     right: 8em;
     text-align: right;
+}
+
+@media screen and (min-width: 1920px) {
+    .time {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .time {
+        font-size: 40px;
+    }
 }
 
 .time-count {
@@ -898,6 +1141,8 @@ body {
 
 .wrapper--inner {
     background: url('https://i.imgur.com/Z2lWU8K.jpg');
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .wrapper--inner::after {
@@ -921,8 +1166,31 @@ body {
 .content-container {
     position: absolute;
     top: 3em;
-    right: 21.7%;
+    left: 50%;
     width: 69em;
+    -webkit-transform: translate(-50%, 10em);
+    -moz-transform: translate(-50%, 10em);
+    -ms-transform: translate(-50%, 10em);
+    -o-transform: translate(-50%, 10em);
+    transform: translate(-50%, 10em);
+}
+
+@media screen and (min-width: 1920px) {
+    .content-container {
+        width: 94em;
+    }
+}
+
+@media screen and (min-width: 3840px) {
+    .content-container {
+        width: 176em;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .content-container {
+        width: 53.2em;
+    }
 }
 
 .myContainer {
@@ -957,6 +1225,10 @@ body {
     box-shadow: 0 3px 9px #000;
 }
 
+.btn:hover .money-icon {
+    background: url('../img/ruble-currency-sign-black.png');
+}
+
 .btn:focus {
     color: #000;
     outline: none;
@@ -966,12 +1238,36 @@ body {
     box-shadow: 0 3px 9px #000;
 }
 
+.btn:focus .money-icon {
+    background: url('../img/ruble-currency-sign-black.png');
+}
+
 .btn.active {
     color: #000;
     background: #ffde39;
     -webkit-box-shadow: 0 3px 9px #000;
     -moz-box-shadow: 0 3px 9px #000;
     box-shadow: 0 3px 9px #000;
+}
+
+.btn.active .money-icon {
+    background: url('../img/ruble-currency-sign-black.png');
+}
+
+.btn.disabled {
+    display: none;
+}
+
+.btn .money-icon {
+    display: block;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    -webkit-transition: all .15s ease-in;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    transition: all .15s ease-in;
+    background: url('../img/ruble-currency-sign.png');
 }
 
 /*END:base*/
