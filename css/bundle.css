@@ -1458,6 +1458,7 @@ screen and (max-height: 1600px) {
 .time {
     font-size: 16px;
     position: absolute;
+    z-index: 10;
     top: 4em;
     right: 8em;
     text-align: right;
@@ -1522,35 +1523,23 @@ body {
     background-size: cover;
 }
 
-.wrapper::after {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background: url('http://alanpride.com/admin/images/BG_Radial_gradient.png') no-repeat;
-    background-position: center center;
-    -moz-background-size: cover;
-    background-size: cover;
-}
-
 .wrapper--inner {
     background: url('https://i.imgur.com/Z2lWU8K.jpg');
     -moz-background-size: cover;
     background-size: cover;
 }
 
-.wrapper--inner::after {
+.wrapper__sub {
     position: absolute;
-    z-index: -1;
+    z-index: 3;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
     background: url('http://alanpride.com/admin/images/BG_Radial_gradient.png');
+    background-position: center center;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .clearfix:after,
