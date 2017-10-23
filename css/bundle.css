@@ -1088,6 +1088,12 @@ screen and (max-height: 1600px) {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .collection-wrapper {
+        height: 16em;
+    }
+}
+
 .collection-wrapper .collection-inner-title {
     font-size: 20px;
     display: none;
@@ -1221,6 +1227,13 @@ screen and (max-height: 1600px) {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .collection {
+        width: 17em;
+        height: 12em;
+    }
+}
+
 .collection.hidden {
     display: none;
 }
@@ -1334,6 +1347,13 @@ screen and (max-height: 1600px) {
     .collection-holder {
         width: 25em;
         height: 15em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .collection-holder {
+        width: 17em;
+        height: 12em;
     }
 }
 
@@ -1452,6 +1472,12 @@ screen and (max-height: 1600px) {
 @media screen and (min-width: 3840px) {
     .collection-text {
         font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .collection-text {
+        font-size: 14px;
     }
 }
 
