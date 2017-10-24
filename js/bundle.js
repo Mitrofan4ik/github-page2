@@ -1,3 +1,5 @@
+window.onload = function() {
+
 const KEY_ENTER = 13;
 const KEY_LEFT = 37;
 const KEY_UP = 38;
@@ -17,6 +19,7 @@ const keyMap ={
 }
 
 const navMap = {
+  //collections
   card: {
     left: {
       back: { col: 1 },
@@ -41,6 +44,12 @@ const navMap = {
   },
   back: {
     right: "buy"
+  },
+  //catalog
+  menu_item: {
+    up: 'menu_item',
+    left: "back",
+    down: "menu_item"
   }
 }
 
@@ -64,7 +73,11 @@ for (var i = 0; i < linksBack.length; i++) {
 
 // KEY NAVIGATION
 function makeDefaultFocus() {
-  document.getElementsByName("buy")[0].focus();
+  console.log('SET DAFULT');
+  const buyButton = document.getElementsByName("buy")[0];
+  const firstMenuItem = document.getElementsByName("menu_item")[0];
+  const defaultFocusItem = buyButton || firstMenuItem;
+  defaultFocusItem.focus();
 }
 
 function getNextNodeIndex(arrow, currentNodeIndex, itemsInRow, itemsLength) {
@@ -82,6 +95,20 @@ function getNextNodeIndex(arrow, currentNodeIndex, itemsInRow, itemsLength) {
   }
 }
 
+function getNextMenuItemIndex(arrow, currentNodeIndex, itemsLength) {
+  console.log('itemsLength: ', itemsLength);
+  console.log('currentNodeIndex: ', currentNodeIndex);
+  console.log('(currentNodeIndex + 1) === itemsLength: ', (currentNodeIndex + 1) === itemsLength);
+  switch (arrow) {
+    case 'up':
+      return currentNodeIndex === 0 ? currentNodeIndex : currentNodeIndex - 1;
+    case 'down':
+      return (currentNodeIndex + 1) === itemsLength ? currentNodeIndex : currentNodeIndex + 1;
+    default:
+      return currentNodeIndex;
+  }
+}
+
 function comparePosition(next, current) {
   return typeof next !== 'undefined'
   ? next instanceof Array
@@ -91,12 +118,16 @@ function comparePosition(next, current) {
 }
 
 const allCards = document.getElementsByName('card');
+const allMenuItems = document.getElementsByName('menu_item');
 document.addEventListener("keydown", e => {
   const itemInFocus = document.querySelector(":focus");
+
+  console.log('itemInFocus: ', itemInFocus);
 
   if(itemInFocus) {
     const arrow = Object.keys(keyMap).find(arrow => keyMap[arrow] === e.keyCode);
     const currentNodeIndex = Array.prototype.indexOf.call(itemInFocus.parentNode.children, itemInFocus);
+    console.log('CURRENT: ', currentNodeIndex);
     const nextNodeName = (navMap[itemInFocus.getAttribute("name")] || {})[arrow];
     let nextNodeIndex = 0;
 
@@ -125,6 +156,11 @@ document.addEventListener("keydown", e => {
         document.getElementsByName(nextNodeName)[ITEMS_IN_ROW-1].focus();
       } else if (itemInFocus.getAttribute("name") === 'card' && nextNodeName === 'card') {
         nextNodeIndex = getNextNodeIndex(arrow, currentNodeIndex, ITEMS_IN_ROW, allCards.length);
+        document.getElementsByName(nextNodeName)[nextNodeIndex].focus();
+      } else if (itemInFocus.getAttribute("name") === 'menu_item' && nextNodeName === 'menu_item') {
+        console.log('WE ARE HERE');
+        nextNodeIndex = getNextMenuItemIndex(arrow, currentNodeIndex, allMenuItems.length);
+        console.log('NEXT ITEM: ', nextNodeIndex);
         document.getElementsByName(nextNodeName)[nextNodeIndex].focus();
       } else {
         document.getElementsByName(nextNodeName)[0].focus();
@@ -176,3 +212,5 @@ function startTime() {
 
 setTimeout(startTime, 20000);
 makeDefaultFocus();
+
+}
