@@ -1113,13 +1113,11 @@ screen and (max-height: 1600px) {
     white-space: nowrap;
 }
 
-@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
-only screen and (min-resolution: 192dpi) and (min-width: 1024px),
-only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
     .collection-wrapper {
-        height: 19em;
+        height: 50em;
     }
 }
 
@@ -1183,13 +1181,11 @@ only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
     }
 }
 
-@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
-only screen and (min-resolution: 192dpi) and (min-width: 1024px),
-only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
     .collection-wrapper .collection-inner-title {
-        font-size: 30px;
+        font-size: 40px;
     }
 }
 
@@ -1269,14 +1265,12 @@ only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
     background: #ccc;
 }
 
-@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
-only screen and (min-resolution: 192dpi) and (min-width: 1024px),
-only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
     .collection {
-        width: 25em;
-        height: 15em;
+        width: 45em;
+        height: 90em;
     }
 }
 
@@ -1417,14 +1411,12 @@ only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
     box-shadow: 0 0 10px 0 black;
 }
 
-@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
-only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
-only screen and (min-resolution: 192dpi) and (min-width: 1024px),
-only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
     .collection-holder {
-        width: 17em;
-        height: 12em;
+        width: 45em;
+        height: 90em;
     }
 }
 
