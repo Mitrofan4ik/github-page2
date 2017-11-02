@@ -1113,6 +1113,16 @@ screen and (max-height: 1600px) {
     white-space: nowrap;
 }
 
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
+only screen and (min-resolution: 192dpi) and (min-width: 1024px),
+only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+    .collection-wrapper {
+        height: 19em;
+    }
+}
+
 @media screen and (min-width: 2100px) {
     .collection-wrapper {
         height: 34em;
@@ -1168,6 +1178,16 @@ screen and (max-height: 1600px) {
 }
 
 @media screen and (min-width: 2800px) {
+    .collection-wrapper .collection-inner-title {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
+only screen and (min-resolution: 192dpi) and (min-width: 1024px),
+only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
     .collection-wrapper .collection-inner-title {
         font-size: 30px;
     }
@@ -1247,6 +1267,17 @@ screen and (max-height: 1600px) {
     -o-transform: translateX(0);
     transform: translateX(0);
     background: #ccc;
+}
+
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
+only screen and (min-resolution: 192dpi) and (min-width: 1024px),
+only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+    .collection {
+        width: 25em;
+        height: 15em;
+    }
 }
 
 @media screen and (min-width: 2100px) {
@@ -1384,6 +1415,24 @@ screen and (max-height: 1600px) {
     -webkit-box-shadow: 0 0 10px 0 black;
     -moz-box-shadow: 0 0 10px 0 black;
     box-shadow: 0 0 10px 0 black;
+}
+
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px),
+only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px),
+only screen and (min-resolution: 192dpi) and (min-width: 1024px),
+only screen and (min-resolution: 2dppx) and (min-width: 1024px) {
+    .collection-holder {
+        width: 17em;
+        height: 12em;
+    }
+}
+
+@media only screen and (max-device-pixel-ratio: .56) {
+    .collection-holder {
+        width: 25em;
+        height: 15em;
+    }
 }
 
 @media screen and (min-width: 2100px) {
