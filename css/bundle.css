@@ -1113,9 +1113,7 @@ screen and (max-height: 1600px) {
     white-space: nowrap;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 2/1),
-(min-resolution: 192dpi) {
+@media screen and (min-aspect-ratio: 5 / 3) {
     .collection-wrapper {
         height: 50em;
     }
@@ -1265,9 +1263,7 @@ screen and (max-height: 1600px) {
     background: #ccc;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 2/1),
-(min-resolution: 192dpi) {
+@media screen and (min-aspect-ratio: 5 / 3) {
     .collection {
         width: 45em;
         height: 90em;
@@ -1411,19 +1407,10 @@ screen and (max-height: 1600px) {
     box-shadow: 0 0 10px 0 black;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(-o-min-device-pixel-ratio: 2/1),
-(min-resolution: 192dpi) {
+@media screen and (min-aspect-ratio: 5 / 3) {
     .collection-holder {
         width: 45em;
         height: 90em;
-    }
-}
-
-@media only screen and (max-device-pixel-ratio: .56) {
-    .collection-holder {
-        width: 25em;
-        height: 15em;
     }
 }
 
